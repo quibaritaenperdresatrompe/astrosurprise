@@ -17,7 +17,7 @@
     "url": "https://github.com/quibaritaenperdresatrompe/astrosurprise/issues"
   },
   "homepage": "https://github.com/quibaritaenperdresatrompe/astrosurprise#readme",
-  "dependencies": {
+  "devDependencies": {
     "parcel-bundler": "^1.12.4"
   }
 }
