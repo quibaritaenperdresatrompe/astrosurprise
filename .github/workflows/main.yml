@@ -20,5 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: install dependencies
+        run: npm install
+
       - name: build artefacts
         run: npm run build
