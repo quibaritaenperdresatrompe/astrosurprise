@@ -1,0 +1,19 @@
+{
+  "name": "astrosurprise",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quibaritaenperdresatrompe/astrosurprise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quibaritaenperdresatrompe/astrosurprise/issues"
+  },
+  "homepage": "https://github.com/quibaritaenperdresatrompe/astrosurprise#readme"
+}
