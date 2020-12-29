@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Astrosurprise",
+  "name": "Astrosurprise, find if you are under the ISS",
   "icons": [
     {
       "src": "favicon.ico",
