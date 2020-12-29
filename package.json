@@ -5,7 +5,6 @@
   "scripts": {
     "build": "react-scripts build",
     "commit": "git-cz",
-    "eject": "react-scripts eject",
     "format": "prettier --write '{*,src/**/*,public/**/*}.{html,js,jsx,json,md}'",
     "lint": "eslint --cache .",
     "start": "react-scripts start",
