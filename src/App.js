@@ -17,8 +17,8 @@ function App() {
         <div
           id="map"
           style={{
-            width: '400px',
-            height: '250px',
+            width: '100vw',
+            height: '80vh',
           }}
         ></div>
       </header>
