@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import LMap from './LMap';
 import Nav from './Nav';
 import Apod from './Apod';
@@ -12,10 +12,25 @@ function App() {
       });
   });
 
+  const [issLocatorClicked, setIssLocatorClicked] = useState(true);
+  const [apodClicked, setApodClicked] = useState(false);
+  const apiKey = 'HMmV4kxd95z5kaMzSJg6NyYvxgtD9MayT2C3DLSa';
+
   return (
     <div>
       <header>
-        <h1>Astrosurprise 🚀</h1>
+        <Nav
+          issLocatorClicked={() => {
+            setIssLocatorClicked(true);
+            setApodClicked(false);
+          }}
+          apodClicked={() => {
+            setApodClicked(true);
+            setIssLocatorClicked(false);
+          }}
+        />
+      </header>
+      {issLocatorClicked ? (
         <div
           id="map"
           style={{
@@ -23,7 +38,9 @@ function App() {
             height: '80vh',
           }}
         ></div>
-      </header>
+      ) : (
+        <Apod apiKey={apiKey} />
+      )}
     </div>
   );
 }
