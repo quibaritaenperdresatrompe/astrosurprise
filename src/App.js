@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import LMap from './LMap';
+import Nav from './Nav';
+import Apod from './Apod';
 
 function App() {
   useEffect(() => {
