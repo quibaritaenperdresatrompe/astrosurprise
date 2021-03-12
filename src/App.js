@@ -14,7 +14,7 @@ function App() {
 
   const [issLocatorClicked, setIssLocatorClicked] = useState(true);
   const [apodClicked, setApodClicked] = useState(false);
-  const apiKey = 'HMmV4kxd95z5kaMzSJg6NyYvxgtD9MayT2C3DLSa';
+  const apiKey = 'LaFmYA6sQJbseJlR2u8YU7N4zV8a5dgaoIaBs15r';
 
   return (
     <div>
@@ -32,6 +32,7 @@ function App() {
       </header>
       {issLocatorClicked ? (
         <div
+          className="debug"
           id="map"
           style={{
             width: '100vw',

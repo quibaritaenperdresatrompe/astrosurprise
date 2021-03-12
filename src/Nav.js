@@ -2,23 +2,17 @@ import React from 'react';
 
 const Nav = ({ issLocatorClicked, apodClicked }) => {
   return (
-    <nav className="bg-light-gray">
-      <ul className="list pl0 flex items-center h3 ma0">
-        <li className="w-80">
-          <p className="f1 pl3 black">Astrosurprise 🚀</p>
-        </li>
-        <li className="w-20 flex justify-center">
-          <p className="link dim mid-gray f2 center pointer" onClick={() => issLocatorClicked()}>
-            Iss Locator
-          </p>
-        </li>
-        <li className="w-20 flex justify-center">
-          <p className="link dim mid-gray f2 center pointer" onClick={() => apodClicked()}>
-            APOD
-          </p>
-        </li>
-      </ul>
-    </nav>
+    <div className="flex flex-row-ns flex-column bg-light-gray h3-ns h5">
+      <p className="f1-ns f2 pl3 black w-75-ns avenir self-center">Astrosurprise 🚀</p>
+      <nav className="flex flex-row-ns flex-column content-center  w-25-ns">
+        <p className="link dim mid-gray f2 center pointer ma0 ma2-ns self-center avenir" onClick={() => issLocatorClicked()}>
+          Iss Locator
+        </p>
+        <p className="link dim mid-gray f2 center pointer ma0 ma2-ns self-center avenir" onClick={() => apodClicked()}>
+          APOD
+        </p>
+      </nav>
+    </div>
   );
 };
 
