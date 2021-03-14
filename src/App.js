@@ -1,47 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import LMap from './LMap';
+import React from 'react';
 import Nav from './Nav';
 import Apod from './Apod';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Issloc from './Issloc';
 
 function App() {
-  useEffect(() => {
-    fetch('http://api.open-notify.org/iss-now.json')
-      .then((response) => response.json())
-      .then((data) => {
-        LMap(data);
-      });
-  });
-
-  const [issLocatorClicked, setIssLocatorClicked] = useState(true);
-  const [apodClicked, setApodClicked] = useState(false);
+  // const [issLocatorClicked, setIssLocatorClicked] = useState(true);
+  // const [apodClicked, setApodClicked] = useState(false);
   const apiKey = 'LaFmYA6sQJbseJlR2u8YU7N4zV8a5dgaoIaBs15r';
 
   return (
     <div>
-      <header>
-        <Nav
-          issLocatorClicked={() => {
-            setIssLocatorClicked(true);
-            setApodClicked(false);
-          }}
-          apodClicked={() => {
-            setApodClicked(true);
-            setIssLocatorClicked(false);
-          }}
-        />
-      </header>
-      {issLocatorClicked ? (
-        <div
-          className="debug"
-          id="map"
-          style={{
-            width: '100vw',
-            height: '80vh',
-          }}
-        ></div>
-      ) : (
-        <Apod apiKey={apiKey} />
-      )}
+      <Router>
+        <Nav />
+        <Route path="/issLocator">
+          <Issloc />
+        </Route>
+        <Route path="/apod">
+          <Apod apiKey={apiKey} />
+        </Route>
+      </Router>
     </div>
   );
 }
