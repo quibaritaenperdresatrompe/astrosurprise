@@ -16,7 +16,7 @@ function Issloc(props) {
       id="map"
       style={{
         width: '100vw',
-        height: '80vh',
+        height: 'calc(100vh - 3rem)',
       }}
     ></div>
   );

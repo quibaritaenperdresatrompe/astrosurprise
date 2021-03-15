@@ -1,0 +1,120 @@
+#topBar {
+    display: flex;
+    background-color:#0D4D4D;
+    height: 3rem;
+    align-items: center;
+    
+}
+
+#topTitle {
+    display: inline;
+    left: 0;
+    font-size: 1.5rem;
+    padding-left: 3rem;
+    font-weight: 300;
+    color:#e6e6e6;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+
+    
+}
+
+a {
+font-size: 1rem;
+margin: 10px;
+text-decoration: none;
+color:rgb(219, 217, 217);
+transition: all 1s ease;
+letter-spacing: 2px;
+}
+
+a:hover{
+    cursor: pointer;
+    color:rgb(235, 235, 235);
+    transition: all 1s ease;
+    transform:scale(1.03);
+}
+
+
+
+.burger {display: none;}
+
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color:rgb(235, 235, 235);
+    margin: 3px;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    .burger {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    nav  {
+        position: absolute;
+        height: 20vh;
+        width: 100vw;
+        right: 0px;
+        top: 3rem;
+        background-color: #226666;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in; 
+
+    }
+    nav a {
+        opacity: 0;
+    }
+}
+    
+.nav-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+    z-index: 100;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotateZ(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotateZ(+45deg) translate(-5px,-6px);
+}
