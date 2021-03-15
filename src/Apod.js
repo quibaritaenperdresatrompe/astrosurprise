@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Video from 'video.js';
+import VideoPlayer from './VideoPlayer';
 import './Apod.css';
 
 const Apod = ({ apiKey }) => {
   const [apod, setApod] = useState({});
+
   // {
   //     date: '2021-02-04',
   //     explanation:
@@ -14,11 +15,11 @@ const Apod = ({ apiKey }) => {
   //     title: 'Apollo 14: A View from Antares',
   //     url: 'https://apod.nasa.gov/apod/image/2102/a14pan9335-43emj_900.jpg',
   //   }
+
   useEffect(() => {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (!data.error) {
           setApod(JSON.parse(JSON.stringify(data)));
         } else {
@@ -26,16 +27,23 @@ const Apod = ({ apiKey }) => {
         }
       })
       .catch((err) => console.error('Sorry Dude :', err));
-    console.log('apod : ', apod);
   }, []);
 
+  //setIds(apod.url.split('/'));
   if (apod.media_type === 'video') {
-    return <Video videoSrc={apod.url} />;
+    let ids = apod.url.split('/');
+
+    return (
+      <div className="apodComponent">
+        <p id="apodTitle">{apod.title}</p>
+        <VideoPlayer videoSrc={ids[ids.length - 1]} />
+        <p id="apodExplanation">{apod.explanation}</p>
+      </div>
+    );
   } else {
     return (
       <div className="apodComponent">
         <p id="apodTitle">{apod.title}</p>
-
         <a href={apod.hdurl}>
           <img id="apodImg" src={apod.url} alt={apod.title} />
         </a>
