@@ -8,7 +8,7 @@
 #apodTitle {
     font-family: avenir;
     font-size: 1.5rem;
-    color:gray;
+    color:#e6e6e6;
 }
 
 #apodImg {
@@ -24,3 +24,11 @@
     transition : all 1s ease;
     filter: brightness(130%);
 }
+
+#apodExplanation {
+
+    text-align: justify;
+    width: 50vw;
+    color: #e6e6e6;
+}
+
