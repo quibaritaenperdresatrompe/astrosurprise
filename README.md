@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Astrosurprise 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Find the ISS exact location in real Time and discover NASA special surprise of the day.
+
+## Features 
+
+[x] Display the ISS on a world MAP
+[x] Display Astronomical Picture Of The Day
+
+## Technologies & API
+
+* React.js
+* [OpenLayers](https://openlayers.org/) API
+* [APOD](https://apod.nasa.gov/apod/astropix.html) API
 
 ## Available Scripts
 
