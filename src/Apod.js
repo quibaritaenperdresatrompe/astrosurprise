@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import VideoPlayer from './VideoPlayer';
 import './Apod.css';
 
-const Apod = ({ apiKey }) => {
+const Apod = () => {
   const [apod, setApod] = useState({});
 
   // {
@@ -17,7 +17,7 @@ const Apod = ({ apiKey }) => {
   //   }
 
   useEffect(() => {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APIKEY}`)
       .then((res) => res.json())
       .then((data) => {
         if (!data.error) {

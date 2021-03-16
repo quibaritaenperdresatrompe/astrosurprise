@@ -7,20 +7,15 @@ import Issloc from './Issloc';
 function App() {
   // const [issLocatorClicked, setIssLocatorClicked] = useState(true);
   // const [apodClicked, setApodClicked] = useState(false);
-  const apiKey = 'LaFmYA6sQJbseJlR2u8YU7N4zV8a5dgaoIaBs15r';
+
+  console.log(process.env.toto);
 
   return (
-    <div>
-      <Router>
-        <Nav />
-        <Route path="/issLocator">
-          <Issloc />
-        </Route>
-        <Route path="/apod">
-          <Apod apiKey={apiKey} />
-        </Route>
-      </Router>
-    </div>
+    <Router>
+      <Nav />
+      <Route path="/issLocator" component={Issloc} />
+      <Route path="/apod" component={Apod} />
+    </Router>
   );
 }
 
