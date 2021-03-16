@@ -4,8 +4,8 @@ Find the ISS exact location in real Time and discover NASA special surprise of t
 
 ## Features 
 
-[x] Display the ISS on a world MAP
-[x] Display Astronomical Picture Of The Day
+- [x] Display the ISS on a world MAP
+- [x] Display Astronomical Picture Of The Day
 
 ## Technologies & API
 
