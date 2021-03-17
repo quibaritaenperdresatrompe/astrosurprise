@@ -1,28 +1,21 @@
-import React, { useEffect } from 'react';
-import LMap from './LMap';
+import React from 'react';
+import Nav from './Nav';
+import Apod from './Apod';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Issloc from './Issloc';
 
 function App() {
-  useEffect(() => {
-    fetch('http://api.open-notify.org/iss-now.json')
-      .then((response) => response.json())
-      .then((data) => {
-        LMap(data);
-      });
-  });
+  // const [issLocatorClicked, setIssLocatorClicked] = useState(true);
+  // const [apodClicked, setApodClicked] = useState(false);
+
+  console.log(process.env.toto);
 
   return (
-    <div>
-      <header>
-        <h1>Astrosurprise 🚀</h1>
-        <div
-          id="map"
-          style={{
-            width: '100vw',
-            height: '80vh',
-          }}
-        ></div>
-      </header>
-    </div>
+    <Router>
+      <Nav />
+      <Route path="/issLocator" component={Issloc} />
+      <Route path="/apod" component={Apod} />
+    </Router>
   );
 }
 

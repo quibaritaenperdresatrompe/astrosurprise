@@ -1,0 +1,34 @@
+.apodComponent {
+    display: flex;
+    flex-direction: column;
+    flex:1 1 auto;
+    align-items: center;
+}
+
+#apodTitle {
+    font-family: avenir;
+    font-size: 1.5rem;
+    color:#e6e6e6;
+}
+
+#apodImg {
+    transition: all 1s ease;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    max-height: 70%;
+    
+}
+
+#apodImg:hover {
+    transition : all 1s ease;
+    filter: brightness(130%);
+}
+
+#apodExplanation {
+
+    text-align: justify;
+    width: 50vw;
+    color: #e6e6e6;
+}
+
